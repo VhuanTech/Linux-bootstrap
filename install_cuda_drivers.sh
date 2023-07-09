@@ -9,4 +9,10 @@ sudo apt-get -y install cuda-drivers
 export PATH=/usr/local/cuda-11.7/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-11.7/lib64\               ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 cat /proc/driver/nvidia/version
-
+echo "System reboot is needed. Will you reboot now? (Y/n)"
+read input
+if [ "$input" = "n" ]; then
+    echo "Please reboot manually!"
+else
+    sudo reboot
+fi
