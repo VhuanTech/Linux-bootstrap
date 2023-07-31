@@ -1,4 +1,5 @@
-sudo apt -y install vim
+#!/bin/sh
+sudo apt install -y build-essential cmake vim python3-dev
 mkdir -p ~/.vim/bundle
 cd ~/.vim/bundle && rm -rf Vundle.vim && git clone https://github.com/VundleVim/Vundle.vim.git
 
@@ -53,3 +54,4 @@ EOF
 cat /tmp/.vimrc >> ~/.vimrc
 
 vim +PluginInstall +qall
+cd ~/.vim/bundle/YouCompleteMe && ./install.py

@@ -127,3 +127,5 @@ alias gs='git status . >/tmp/gs && vim /tmp/gs'
 export HISTTIMEFORMAT="%d/%m/%y %T "
 
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+export PYOPENGL_PLATFORM=osmesa
