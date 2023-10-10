@@ -6,5 +6,6 @@ cat << EOF >> ~/.bashrc
 export WORKON_HOME=~/.virtualenvs
 export PROJECT_HOME=~/workspace
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 EOF
+echo 'Run "source ~/.bashrc" manually'

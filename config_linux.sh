@@ -8,8 +8,8 @@ if [ "$swap" = "y" ]; then
     sudo swapon /swapfile
 fi
 
-read -p "Configure ssh alive interval? (y/n) " ssh_config
-if [ "$swap" = "y" ]; then
+read -p "Configure ssh client alive interval? (y/n) " ssh_config
+if [ "$ssh_config" = "y" ]; then
     mkdir -p ~/.ssh
     cat <<EOF > ~/.ssh/config
 Host * ServerAliveInterval 60

@@ -129,4 +129,4 @@ export HISTTIMEFORMAT="%d/%m/%y %T "
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 export PYOPENGL_PLATFORM=osmesa
-export TORCH_HOME=/data/torch/hub
+export TORCH_HOME=/data/torch/
