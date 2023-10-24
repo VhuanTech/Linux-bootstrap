@@ -116,6 +116,16 @@ if ! shopt -oq posix; then
   fi
 fi
 
+function _switch_cuda {
+   v=$1
+   echo "Switching to CUDA version $v..."
+   export PATH=$PATH:/usr/local/cuda-$v/bin
+   export CUDADIR=/usr/local/cuda-$v
+   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-$v/lib64
+   nvcc --version
+}
+_switch_cuda 11.3 # change the version of your like to load bash.
+
 alias dcb='sudo docker compose build'
 alias dcu='sudo docker compose up -d'
 alias dcd='sudo docker compose down'

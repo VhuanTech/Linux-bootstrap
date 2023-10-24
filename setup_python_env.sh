@@ -3,6 +3,7 @@ mkdir -p ~/.pip/
 cat <<EOF1 > ~/.pip/pip.conf
 [global]
 index-url=https://mirrors.cloud.tencent.com/pypi/simple
+cache-dir=/data/cache/pip/
 
 [install]
 trusted-host=mirrors.cloud.tencent.com
