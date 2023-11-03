@@ -140,3 +140,4 @@ export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 export PYOPENGL_PLATFORM=osmesa
 export TORCH_HOME=/data/torch/
+export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:24

@@ -24,4 +24,7 @@ alias dcd='sudo docker compose down'
 alias dcp='sudo docker compose ps'
 alias dcl='sudo docker compose logs >/tmp/logs && vim /tmp/logs'
 alias dcr='sudo docker compose down && sudo docker compose build && sudo docker compose up -d'
+alias dcrt='sudo docker compose -f docker-compose.test.yml down && sudo docker compose -f docker-compose.test.yml build && sudo docker compose -f docker-compose.test.yml up -d'
+alias dcdt='sudo docker compose -f docker-compose.test.yml down'
+alias dcp='sudo docker compose ps'
 EOF
