@@ -1,0 +1,6 @@
+# /etc/ssh/sshd_config
+TCPKeepAlive yes
+#PermitUserEnvironment no
+#Compression delayed
+ClientAliveInterval 100
+ClientAliveCountMax 3000
