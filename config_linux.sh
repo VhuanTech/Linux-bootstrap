@@ -6,12 +6,15 @@ if [ "$swap" = "y" ]; then
     sudo chmod 600 /swapfile
     sudo mkswap /swapfile
     sudo swapon /swapfile
+    sudo cat <<EOF1 >/etc/fstab
+/swapfile none swap sw 0 0
+EOF1
 fi
 
 read -p "Configure ssh client alive interval? (y/n) " ssh_config
 if [ "$ssh_config" = "y" ]; then
     mkdir -p ~/.ssh
-    cat <<EOF > ~/.ssh/config
+    cat <<EOF2 > ~/.ssh/config
 Host * ServerAliveInterval 60
-EOF
+EOF2
 fi
