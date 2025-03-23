@@ -3,7 +3,8 @@ sudo apt install -y apt-transport-https ca-certificates curl software-properties
 curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
 sudo apt update
-sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+# To support Schema 1 images
+sudo apt install -y docker-ce=5:26.1.4-1~ubuntu.20.04~focal docker-ce-cli=5:26.1.4-1~ubuntu.20.04~focal containerd.io docker-compose-plugin
 
 # install nvidia container toolkit
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
