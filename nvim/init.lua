@@ -9,3 +9,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 require("config.options")
 require("lazy").setup("plugins")
 require("config.keymaps")
+-- Load custom Lua snippets
+require("snippets.javascript")
+require("snippets.python")

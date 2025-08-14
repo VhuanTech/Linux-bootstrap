@@ -36,3 +36,13 @@ vim.keymap.set("n", "<leader>ht", gitsigns.toggle_signs, { desc = "Toggle git si
 vim.keymap.set("n", "<leader>e", function()
   require("nvim-tree.api").tree.toggle()
 end, { desc = "Toggle file explorer" })
+
+
+-- Luasnip
+local ls = require("luasnip")
+
+vim.keymap.set({ "i", "s" }, "<C-l>", function()
+  if ls.expand_or_jumpable() then
+    ls.expand_or_jump()
+  end
+end, { silent = true })
