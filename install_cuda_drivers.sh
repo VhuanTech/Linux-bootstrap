@@ -14,7 +14,12 @@ sudo apt-get update
 # Install the latest CUDA toolkit
 sudo apt-get -y install cuda
 
+# Add CUDA Toolkit to PATH
+export PATH=/usr/local/cuda/bin:$PATH
+# Add CUDA Libraries to LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 # export LD_LIBRARY_PATH=/usr/local/cuda-11.7/lib64\  ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
 # cat /proc/driver/nvidia/version
 echo "System reboot is needed. Will you reboot now? (Y/n)"
 read input
