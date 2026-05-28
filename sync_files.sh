@@ -185,7 +185,7 @@ perform_sync() {
         -avz                          # archive mode, verbose, compress
         --progress                   # show progress
         --human-readable             # human readable numbers
-        --delete                     # delete extraneous files from destination
+        --update                     # skip files that are newer on the destination
         --stats                      # give some file-transfer stats
         -e "ssh -p ${SSH_PORT}"      # specify ssh port
     )
